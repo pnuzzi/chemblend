@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className=" bg-gray-100">
+    <main className=" bg-gray-300">
       <div className=" h-96">
         <img
           className="object-cover w-full h-96"
