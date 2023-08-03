@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Nav.css";
 
 export default function Nav() {
@@ -12,80 +12,124 @@ export default function Nav() {
         className={` md:hidden hamburger-button ${isOpen ? "open" : "close"}`}
       />
       <div className="hidden md:flex">
-        <Link
-          className="px-3 py-2 hover:bg-white hover:text-chemblend rounded"
-          to=""
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "px-3 py-2 bg-white text-chemblend rounded"
+              : "px-3 py-2 hover:bg-white hover:text-chemblend rounded"
+          }
+          to="/"
         >
           Home
-        </Link>
-        <Link
-          className="px-3 py-2 hover:bg-white hover:text-chemblend rounded"
-          to=""
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "px-3 py-2 bg-white text-chemblend rounded"
+              : "px-3 py-2 hover:bg-white hover:text-chemblend rounded"
+          }
+          to="/Services"
         >
           Services
-        </Link>
-        <Link
-          className="px-3 py-2 hover:bg-white hover:text-chemblend rounded"
-          to=""
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "px-3 py-2 bg-white text-chemblend rounded"
+              : "px-3 py-2 hover:bg-white hover:text-chemblend rounded"
+          }
+          to="/IndustriesServed"
         >
           Industries Served
-        </Link>
-        <Link
-          className="px-3 py-2 hover:bg-white hover:text-chemblend rounded"
-          to=""
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "px-3 py-2 bg-white text-chemblend rounded"
+              : "px-3 py-2 hover:bg-white hover:text-chemblend rounded"
+          }
+          to="/LabSupport"
         >
           Lab Support
-        </Link>
-        <Link
-          className="px-3 py-2 hover:bg-white hover:text-chemblend rounded"
-          to=""
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "px-3 py-2 bg-white text-chemblend rounded"
+              : "px-3 py-2 hover:bg-white hover:text-chemblend rounded"
+          }
+          to="/AboutUs"
         >
           About Us
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           className="px-3 py-2 hover:bg-white hover:text-chemblend rounded"
-          to=""
+          to="/ContactUs"
         >
           Contact Us
-        </Link>
+        </NavLink>
       </div>
       <div className={`panel ${isOpen ? "open" : "close"} flex flex-col`}>
-        <Link
-          className="px-3 py-2 hover:bg-white hover:text-chemblend rounded"
-          to=""
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "px-3 py-2 bg-white text-chemblend rounded"
+              : "px-3 py-2 hover:bg-white hover:text-chemblend rounded"
+          }
+          to="/"
         >
           Home
-        </Link>
-        <Link
-          className="px-3 py-2 hover:bg-white hover:text-chemblend rounded"
-          to=""
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "px-3 py-2 bg-white text-chemblend rounded"
+              : "px-3 py-2 hover:bg-white hover:text-chemblend rounded"
+          }
+          to="/Services"
         >
           Services
-        </Link>
-        <Link
-          className="px-3 py-2 hover:bg-white hover:text-chemblend rounded"
-          to=""
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "px-3 py-2 bg-white text-chemblend rounded"
+              : "px-3 py-2 hover:bg-white hover:text-chemblend rounded"
+          }
+          to="/IndustriesServed"
         >
           Industries Served
-        </Link>
-        <Link
-          className="px-3 py-2 hover:bg-white hover:text-chemblend rounded"
-          to=""
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "px-3 py-2 bg-white text-chemblend rounded"
+              : "px-3 py-2 hover:bg-white hover:text-chemblend rounded"
+          }
+          to="/LabSupport"
         >
           Lab Support
-        </Link>
-        <Link
-          className="px-3 py-2 hover:bg-white hover:text-chemblend rounded"
-          to=""
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "px-3 py-2 bg-white text-chemblend rounded"
+              : "px-3 py-2 hover:bg-white hover:text-chemblend rounded"
+          }
+          to="/AboutUs"
         >
           About Us
-        </Link>
-        <Link
-          className="px-3 py-2 hover:bg-white hover:text-chemblend rounded"
-          to=""
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "px-3 py-2 bg-white text-chemblend rounded"
+              : "px-3 py-2 hover:bg-white hover:text-chemblend rounded"
+          }
+          to="/ContactUs"
         >
           Contact Us
-        </Link>
+        </NavLink>
       </div>
     </nav>
   );
